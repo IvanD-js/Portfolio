@@ -39,7 +39,7 @@ export default function Hero() {
           mb-6
         "
         >
-          Julio Iván Pérez Romero
+          Ivan Romero
         </h3>
 
         <p
