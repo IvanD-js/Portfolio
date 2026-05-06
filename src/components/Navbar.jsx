@@ -11,7 +11,7 @@ export default function Navbar() {
         </h1> */}
 
         <div className="flex items-center w-35 h-6">
-            <img src="../public/logoIvan.png" alt="logo de ivandev" />
+            <img src="/logoivan.png" alt="logo de ivandev" />
         </div>
 
        
