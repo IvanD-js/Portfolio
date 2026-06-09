@@ -1,81 +1,67 @@
+const timeline = [
+  {
+    year: "2023",
+    title: "Started Computer Systems Engineering",
+    description:
+      "Began my academic path in software development, programming fundamentals and computer systems."
+  },
+  {
+    year: "2025",
+    title: "IT Internship",
+    description:
+      "Worked on technical support, preventive maintenance, network assistance and infrastructure tasks."
+  },
+  {
+    year: "2025",
+    title: "Full Stack Projects",
+    description:
+      "Built practical applications using Java, Spring Boot, React, Node.js and databases."
+  },
+  {
+    year: "2026",
+    title: "Open to Junior Opportunities",
+    description:
+      "Currently focused on backend development and looking for internships or junior roles."
+  }
+];
+
 export default function Timeline() {
-
-  const timeline = [
-
-    {
-      year:"2023",
-      title:"Started Computer Systems Engineering"
-    },
-
-    {
-      year:"2025",
-      title:"IT Internship"
-    },
-
-    {
-      year:"2025",
-      title:"Built Full Stack Projects"
-    },
-
-    {
-      year:"2026",
-      title:"Open to Junior Opportunities"
-    }
-
-  ];
-
   return (
+    <section className="section-wrap">
+      <div className="container-custom">
+        <div className="mb-12">
+          <span className="mb-3 inline-flex text-sm font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
+            Journey
+          </span>
 
-    <section className="py-28 px-6">
-
-      <div className="max-w-5xl mx-auto">
-
-        <h2
-          className="
-          text-4xl
-          text-white
-          font-bold
-          mb-12
-        "
-        >
-          My Journey
-        </h2>
-
-        <div className="space-y-8">
-
-          {
-            timeline.map((item,index)=>(
-
-              <div
-
-                key={index}
-
-                className="
-                border-l-2
-                border-blue-500
-                pl-6
-                "
-              >
-
-                <p className="text-blue-400">
-                  {item.year}
-                </p>
-
-                <h3 className="text-white text-xl">
-                  {item.title}
-                </h3>
-
-              </div>
-
-            ))
-          }
-
+          <h2 className="section-title">
+            My Developer Path
+          </h2>
         </div>
 
+        <div className="relative space-y-6">
+          {timeline.map((item, index) => (
+            <article
+              key={index}
+              className="card-shell relative ml-5 p-6 before:absolute before:-left-[1.85rem] before:top-8 before:h-4 before:w-4 before:rounded-full before:bg-[var(--accent)]"
+            >
+              <div className="absolute -left-[1.38rem] top-0 h-full w-px bg-[var(--border)]" />
+
+              <p className="text-sm font-semibold text-[var(--accent)]">
+                {item.year}
+              </p>
+
+              <h3 className="mt-2 text-xl font-bold text-white">
+                {item.title}
+              </h3>
+
+              <p className="mt-3 leading-7 text-[var(--muted)]">
+                {item.description}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
-
     </section>
-
-  )
-
+  );
 }

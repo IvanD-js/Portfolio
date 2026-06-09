@@ -1,74 +1,56 @@
 import inventoryImg from "../assets/projects/inventory.png";
 import employeeImg from "../assets/projects/emplooyes.png";
 import taskImg from "../assets/projects/task.png";
-import { image } from "framer-motion/client";
-
 
 const projects = [
-
   {
-    id:1,
+    id: 1,
     image: inventoryImg,
-    title:"Inventory Management System",
-
+    title: "Inventory Management Platform",
     description:
-      "Full stack inventory platform with CRUD operations and REST API.",
-
-    stack:[
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB"
+      "Full stack inventory system for product control, stock management and REST API integration.",
+    stack: ["React", "Node.js", "Express", "MongoDB"],
+    features: [
+      "Product CRUD with validation",
+      "REST API architecture",
+      "Inventory and stock control"
     ],
-
-    github:
-      "https://github.com/IvanD-js/Gestor-de-inventario-de-productos",
-
-    demo:"#"
+    github: "https://github.com/IvanD-js/Gestor-de-inventario-de-productos",
+    demo: "#",
+    status: "Completed"
   },
-
   {
-    id:2,
+    id: 2,
     image: employeeImg,
-    title:"Employee Management System",
-
+    title: "Employee Management System",
     description:
-      "Web application for employee administration using Java and Spring Boot.",
-
-    stack:[
-      "Java",
-      "Spring Boot",
-      "JSP",
-      "MySQL"
+      "Administrative web application for employee registration, update and management using Java technologies.",
+    stack: ["Java", "Spring Boot", "JSP", "MySQL"],
+    features: [
+      "Employee CRUD",
+      "Server-side MVC structure",
+      "MySQL persistence"
     ],
-
-    github:
-        "https://github.com/IvanD-js/Sistema-Gestor-De-Empleados.git",
-
-    demo:"#"
+    github: "https://github.com/IvanD-js/Sistema-Gestor-De-Empleados.git",
+    demo: "#",
+    status: "Completed"
   },
-
   {
-    id:3,
+    id: 3,
     image: taskImg,
-    title:"Task management system",
-
+    title: "Task Management System",
     description:
-      "System that allows you to manage tasks, using JavaFX and Springboot.",
-
-    stack:[
-      "Java",
-      "Swing",
-      "JavaFX",
-      "MySQL"
+      "Desktop task manager focused on structured task organization and productivity.",
+    stack: ["Java", "JavaFX", "Spring Boot", "MySQL"],
+    features: [
+      "Task creation and edition",
+      "Status tracking",
+      "Desktop interface with JavaFX"
     ],
-
-    github:
-        "https://github.com/IvanD-js/Sistema-Gestor-De-Tareas.git",
-
-    demo:"#"
+    github: "https://github.com/IvanD-js/Sistema-Gestor-De-Tareas.git",
+    demo: "#",
+    status: "Completed"
   }
-
 ];
 
 export default projects;

@@ -1,139 +1,111 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
-
   return (
-
-    <section
-      className="
-      min-h-screen
-      flex
-      items-center
-      justify-center
-      text-center
-      px-6
-    "
-    >
-
-      <motion.div
-
-        initial={{ opacity:0, y:40 }}
-
-        animate={{ opacity:1, y:0 }}
-
-        transition={{ duration:0.8 }}
-
-      >
-
-        <h1 className=" text-5xl text-blue-400 mb-4">
-          Backend Developer
-        </h1>
-
-        <h3
-          className="
-          text-4xl
-          sm:text-5xl
-          md:text-7xl
-          font-bold
-          text-white
-          mb-6
-        "
+    <section id="hero" className="section-wrap pt-28 md:pt-36">
+      <div className="container-custom grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
         >
-          Ivan Romero
-        </h3>
+          <span className="mb-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
+            Backend Developer • Java • Spring Boot
+          </span>
 
-        <p
-          className="
-          text-slate-300
-          text-xl
-          max-w-2xl
-          mx-auto
-          mb-8
-        "
+          <h1 className="mb-5 text-4xl font-extrabold leading-tight tracking-[-0.05em] text-white sm:text-5xl md:text-6xl">
+            Building robust backend solutions with clean architecture and modern web technologies.
+          </h1>
+
+          <p className="max-w-2xl text-lg leading-8 text-[var(--muted)]">
+            I’m Julio Iván Pérez Romero, a Computer Systems Engineering student
+            focused on backend development with Java and Spring Boot, with
+            experience building full stack applications using React, Node.js and
+            relational/non-relational databases.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href="#projects" className="btn-primary">
+              View Projects
+            </a>
+
+            <a href="/CV-IVAN-ROMERO.pdf" download className="btn-secondary">
+              Download CV
+            </a>
+          </div>
+
+          <div className="mt-10 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="card-shell p-5 text-center">
+              <h3 className="text-2xl font-bold text-white">5+</h3>
+              <p className="mt-1 text-sm text-[var(--muted)]">Projects Built</p>
+            </div>
+
+            <div className="card-shell p-5 text-center">
+              <h3 className="text-2xl font-bold text-white">2+</h3>
+              <p className="mt-1 text-sm text-[var(--muted)]">Years Coding</p>
+            </div>
+
+            <div className="card-shell p-5 text-center">
+              <h3 className="text-2xl font-bold text-white">B1</h3>
+              <p className="mt-1 text-sm text-[var(--muted)]">English Level</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.aside
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="card-shell p-7"
         >
-          Java & Spring Boot
+          <h2 className="mb-6 text-2xl font-bold text-white">
+            Profile Summary
+          </h2>
 
-          Building scalable backend solutions
-          and modern full stack applications.
+          <div className="space-y-6">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-2)]">
+                Location
+              </p>
+              <p className="mt-2 text-white">Mexico City, Mexico</p>
+            </div>
 
-          Based in Mexico City.
-          Open to internships and junior opportunities.
-        </p>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-2)]">
+                Main Focus
+              </p>
+              <p className="mt-2 text-white">
+                Backend Development with Java & Spring Boot
+              </p>
+            </div>
 
-        <div
-  className="
-  flex
-  justify-center
-  gap-10
-  mt-10
-  text-slate-400
-"
->
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-2)]">
+                Core Stack
+              </p>
 
-  <div>
-    <h3 className="text-white text-2xl">
-      5+
-    </h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="chip">Java</span>
+                <span className="chip">Spring Boot</span>
+                <span className="chip">REST APIs</span>
+                <span className="chip">MySQL</span>
+                <span className="chip">PostgreSQL</span>
+                <span className="chip">MongoDB</span>
+                <span className="chip">React</span>
+              </div>
+            </div>
 
-    <p>Projects</p>
-  </div>
-
-  <div>
-    <h3 className="text-white text-2xl">
-      2+
-    </h3>
-
-    <p>Years Coding</p>
-  </div>
-
-  <div>
-    <h3 className="text-white text-2xl">
-      B2
-    </h3>
-
-    <p>English</p>
-  </div>
-
-</div>
-
-        <div className="flex gap-4 justify-center">
-
-          <a
-            href="#projects"
-            className="
-            px-6
-            py-3
-            bg-blue-600
-            rounded-xl
-            text-white
-            font-medium
-            hover:scale-105
-            duration-300
-          "
-          >
-            View Projects
-          </a>
-
-          <a
-            href="/CV-IVAN-ROMERO.pdf"
-            download
-            className="
-            px-6
-            py-3
-            border
-            border-slate-700
-            rounded-xl
-            text-white
-          "
-          >
-            Download CV
-          </a>
-
-        </div>
-
-      </motion.div>
-
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-2)]">
+                Availability
+              </p>
+              <p className="mt-2 text-white">
+                Open to internships and junior backend opportunities
+              </p>
+            </div>
+          </div>
+        </motion.aside>
+      </div>
     </section>
-
-  )
+  );
 }

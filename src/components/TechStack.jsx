@@ -1,65 +1,32 @@
 import skills from "../data/skills";
 
 export default function TechStack() {
-
   return (
+    <section className="section-wrap bg-[rgba(17,17,19,0.55)]">
+      <div className="container-custom">
+        <div className="mb-12">
+          <span className="mb-3 inline-flex text-sm font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
+            Skills
+          </span>
 
-    <section
-      className="py-28 px-6"
-    >
+          <h2 className="section-title">
+            Tech Stack
+          </h2>
 
-      <div className="max-w-6xl mx-auto">
-
-        <h2
-          className="
-          text-4xl
-          text-white
-          font-bold
-          mb-10
-          hover:scale-110
-          hover:border-blue-500
-          duration-300
-          cursor-default
-        "
-        >
-          Tech Stack
-        </h2>
-
-        <div
-          className="
-          flex
-          flex-wrap
-          gap-4
-        "
-        >
-
-          {
-            skills.map((skill,index)=>(
-
-              <span
-                key={index}
-                className="
-                px-5
-                py-3
-                rounded-xl
-                bg-slate-800
-                text-slate-300
-                border
-                border-slate-700
-              "
-              >
-                {skill}
-              </span>
-
-            ))
-          }
-
+          <p className="section-subtitle max-w-3xl">
+            Technologies and tools I use to build backend services, web
+            applications and full stack solutions.
+          </p>
         </div>
 
+        <div className="flex flex-wrap gap-3">
+          {skills.map((skill, index) => (
+            <span key={index} className="chip">
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
-
     </section>
-
-  )
-
+  );
 }

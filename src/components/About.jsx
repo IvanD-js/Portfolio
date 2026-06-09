@@ -1,44 +1,49 @@
 export default function About() {
-
   return (
+    <section id="about" className="section-wrap">
+      <div className="container-custom grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <span className="mb-3 inline-flex text-sm font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
+            About
+          </span>
 
-    <section
-      id="about"
-      className="py-28 px-6"
-    >
+          <h2 className="section-title">
+            Backend-focused developer building practical software solutions.
+          </h2>
+        </div>
 
-      <div className="max-w-6xl mx-auto">
+        <div className="card-shell p-8">
+          <p className="section-subtitle mt-0">
+            I am a Computer Systems Engineering student specialized in Web
+            Development Technologies. My main focus is backend development with
+            Java and Spring Boot, but I also have experience collaborating on
+            frontend and full stack projects.
+          </p>
 
-        <h2
-          className="
-          text-4xl
-          font-bold
-          text-white
-          mb-8
-        "
-        >
-          About Me
-        </h2>
+          <p className="section-subtitle">
+            I enjoy building applications that solve real problems, applying
+            clean structure, database design, REST APIs and user-centered
+            interfaces. My goal is to continue growing as a backend developer
+            and contribute to professional software projects.
+          </p>
 
-        <p
-          className="
-          text-slate-300
-          text-lg
-          leading-8
-          max-w-4xl
-        "
-        >
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
+              <p className="text-sm text-[var(--muted)]">Education</p>
+              <h3 className="mt-2 font-semibold text-white">
+                Computer Systems Engineering
+              </h3>
+            </div>
 
-          Computer Systems Engineering student specialized in
-          web development technologies, focused primarily on
-          backend development with Java and Spring Boot,
-          collaborating in frontend and full stack projects.
-
-        </p>
-
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] p-5">
+              <p className="text-sm text-[var(--muted)]">Specialization</p>
+              <h3 className="mt-2 font-semibold text-white">
+                Web Development Technologies
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
-
   );
 }

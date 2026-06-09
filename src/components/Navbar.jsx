@@ -1,35 +1,49 @@
-import ThemeToggle from "./ThemeToggle";
-
 export default function Navbar() {
   return (
-    <header className="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgba(13,13,14,0.82)] backdrop-blur-xl">
+      <nav className="container-custom flex h-[72px] items-center justify-between px-6">
+        <a href="#hero" className="flex items-center gap-3">
+          <img
+            src="/logo.jpeg"
+            alt="IvanDev logo"
+            className="h-8 w-auto"
+          />
 
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <span className="text-lg font-bold text-white">
+            IvanDev
+          </span>
+        </a>
 
-        {/* <h1 className="text-xl font-bold text-white">
-          IvanDev
-        </h1> */}
+        <ul className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
+          <li>
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+          </li>
 
-        <div className="flex items-center w-35 h-6">
-            <img src="/logoivan.png" alt="logo de ivandev" />
-        </div>
+          <li>
+            <a href="#experience" className="transition hover:text-white">
+              Experience
+            </a>
+          </li>
 
-       
+          <li>
+            <a href="#projects" className="transition hover:text-white">
+              Projects
+            </a>
+          </li>
 
-        <ul className="flex gap-8 text-slate-300 hidden md:flex gap-8 text-slate-300">
-
-          <li><a href="#about">About</a></li>
-
-          <li><a href="#projects">Projects</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-
+          <li>
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
+          </li>
         </ul>
 
-        <ThemeToggle />
-
+        <a href="#contact" className="hidden md:inline-flex btn-secondary">
+          Let’s Talk
+        </a>
       </nav>
-
     </header>
-  )
+  );
 }
