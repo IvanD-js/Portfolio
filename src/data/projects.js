@@ -50,6 +50,24 @@ const projects = [
     github: "https://github.com/IvanD-js/Sistema-Gestor-De-Tareas.git",
     demo: "#",
     status: "Completed"
+  },
+   {
+    id: 4,
+    image: taskImg,
+    title: "Auth service Api",
+    description:
+      "Auth service api.",
+    stack: ["Java", "JWT", "Spring Boot", "MySQL", "Spring Security", "PostgreSQL"],
+    features: [
+      "Register users",
+      "Login users",
+      "Authentication and authorization",
+      "Token generation and validation",
+      "Password hashing and security"
+    ],
+    github: "https://github.com/IvanD-js/auth-service-api.git",
+    demo: "#",
+    status: "Completed"
   }
 ];
 
