@@ -1,7 +1,8 @@
 const skills = [
   "Java",
   "Spring Boot",
-  "Spring",
+  "Spring Security",
+  "Docker",
   "Hibernate",
   "REST API",
   "MySQL",

@@ -1,7 +1,7 @@
 import inventoryImg from "../assets/projects/inventory.png";
 import employeeImg from "../assets/projects/emplooyes.png";
 import taskImg from "../assets/projects/task.png";
-
+import authServiceImg from "../assets/projects/authserviceapi.png";
 const projects = [
   {
     id: 1,
@@ -53,7 +53,7 @@ const projects = [
   },
    {
     id: 4,
-    image: taskImg,
+    image: authServiceImg,
     title: "Auth service Api",
     description:
       "Auth service api.",
@@ -66,7 +66,7 @@ const projects = [
       "Password hashing and security"
     ],
     github: "https://github.com/IvanD-js/auth-service-api.git",
-    demo: "#",
+    demo: "https://auth-service-api-6p8h.onrender.com/swagger-ui/index.html",
     status: "Completed"
   }
 ];

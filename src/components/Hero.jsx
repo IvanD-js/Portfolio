@@ -29,7 +29,7 @@ export default function Hero() {
               View Projects
             </a>
 
-            <a href="/CV-IVAN-ROMERO.pdf" download className="btn-secondary">
+            <a href="/Ivan_Romero_CV.pdf" download className="btn-secondary">
               Download CV
             </a>
           </div>

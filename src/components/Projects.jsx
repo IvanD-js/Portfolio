@@ -23,49 +23,51 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="card-shell group overflow-hidden transition duration-300 hover:-translate-y-2"
+              className="card-shell group overflow-hidden transition duration-300 hover:-translate-y-2 flex flex-col justify-between"
             >
-              <div className="overflow-hidden border-b border-[var(--border)]">
+              <div className="overflow-hidden border-b border-[var(--border)] h-52 w-full flex items-center justify-center bg-zinc-900/50">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
 
-              <div className="p-6">
-                <div className="mb-4 flex items-start justify-between gap-3">
-                  <h3 className="text-2xl font-bold text-white">
-                    {project.title}
-                  </h3>
+              <div className="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div className="mb-4 flex items-start justify-between gap-3">
+                    <h3 className="text-2xl font-bold text-white">
+                      {project.title}
+                    </h3>
 
-                  <span className="shrink-0 rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--muted)]">
-                    {project.status}
-                  </span>
-                </div>
-
-                <p className="mb-5 leading-7 text-[var(--muted)]">
-                  {project.description}
-                </p>
-
-                <ul className="mb-5 space-y-2 text-sm text-[var(--muted)]">
-                  {project.features.map((feature, index) => (
-                    <li key={index}>
-                      <span className="text-[var(--accent)]">•</span>{" "}
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {project.stack.map((tech, index) => (
-                    <span key={index} className="chip text-xs">
-                      {tech}
+                    <span className="shrink-0 rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--muted)]">
+                      {project.status}
                     </span>
-                  ))}
+                  </div>
+
+                  <p className="mb-5 leading-7 text-[var(--muted)]">
+                    {project.description}
+                  </p>
+
+                  <ul className="mb-5 space-y-2 text-sm text-[var(--muted)]">
+                    {project.features.map((feature, index) => (
+                      <li key={index}>
+                        <span className="text-[var(--accent)]">•</span>{" "}
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {project.stack.map((tech, index) => (
+                      <span key={index} className="chip text-xs">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mt-auto">
                   <a
                     href={project.github}
                     target="_blank"
@@ -74,22 +76,12 @@ export default function Projects() {
                   >
                     GitHub
                   </a>
-
-                  {project.demo !== "#" && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn-secondary"
-                    >
-                      Live Demo
-                    </a>
-                  )}
                 </div>
               </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );
